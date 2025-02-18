@@ -8,8 +8,8 @@ from aws_cryptographic_material_providers.mpl import AwsCryptographicMaterialPro
 from aws_cryptographic_material_providers.mpl.config import MaterialProvidersConfig
 from aws_cryptographic_material_providers.mpl.models import CreateAwsKmsKeyringInput
 from aws_cryptographic_material_providers.mpl.references import IKeyring
+from config import KMS_KEY_ARN
 S3_BUCKET = 'weaponwatch-demo'
-KMS_KEY_ARN = 'arn:aws:kms:us-east-1:203918845922:key/f0e18996-d4a0-49f6-827d-cc8915c5f864'
 s3_client = boto3.client('s3')
 
 def encrypt_and_upload(file_path, s3_key):

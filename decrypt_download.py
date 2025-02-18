@@ -9,8 +9,8 @@ from aws_cryptographic_material_providers.mpl.config import MaterialProvidersCon
 from aws_cryptographic_material_providers.mpl.models import CreateAwsKmsKeyringInput
 from aws_cryptographic_material_providers.mpl.references import IKeyring
 import boto3.s3
+from config import KMS_KEY_ARN
 S3_BUCKET = 'weaponwatch-demo'
-KMS_KEY_ARN = 'arn:aws:kms:us-east-1:203918845922:key/f0e18996-d4a0-49f6-827d-cc8915c5f864'
 s3_client = boto3.client('s3')
 def download_decrypt(s3_key, output_path):
     client = aws_encryption_sdk.EncryptionSDKClient(
